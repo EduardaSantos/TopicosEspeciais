@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/id_tvAtividade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atividade 1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <Button
+        android:id="@+id/id_btEnviar"
+        android:layout_width="175dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:text="Enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toEndOf="@+id/id_btCadastrar"
+        app:layout_constraintTop_toBottomOf="@+id/id_rgGenero"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <Button
+        android:id="@+id/id_btCadastrar"
+        android:layout_width="175dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_rgGenero"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <TextView
+        android:id="@+id/id_tvInteresses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="88dp"
+        android:text="Interesses"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tlDatNasc" />
+
+    <TextView
+        android:id="@+id/id_tvgenero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Genero"
+        app:layout_constraintBottom_toTopOf="@+id/id_rgGenero"
+        app:layout_constraintEnd_toStartOf="@+id/id_tvInteresses"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tlDatNasc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/id_cbMusica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Musica"
+        app:layout_constraintStart_toEndOf="@+id/id_rgGenero"
+        app:layout_constraintTop_toBottomOf="@+id/id_cbFilme" />
+
+    <CheckBox
+        android:id="@+id/id_cbFilme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Filme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toEndOf="@+id/id_rgGenero"
+        app:layout_constraintTop_toBottomOf="@+id/id_tvInteresses" />
+
+    <RadioGroup
+        android:id="@+id/id_rgGenero"
+        android:layout_width="208dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toStartOf="@+id/id_tvInteresses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tlDatNasc">
+
+        <RadioButton
+            android:id="@+id/id_rbfeminino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Feminino" />
+
+        <RadioButton
+            android:id="@+id/id_rbmasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masculino" />
+
+    </RadioGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_tlNome"
+        android:layout_width="356dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tvAtividade">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_tiNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_tlEmail"
+        android:layout_width="361dp"
+        android:layout_height="57dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tlNome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_tiEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_tlTelefone"
+        android:layout_width="364dp"
+        android:layout_height="62dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tlEmail">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_tiTelefone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telefone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/id_tlDatNasc"
+        android:layout_width="362dp"
+        android:layout_height="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_tlTelefone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_tiDatNasc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data de Nascimento" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
